@@ -72,7 +72,7 @@ class TagField(CharField):
         """
         Save tags back to the database
         """
-        if not kwargs['raw']
+        if not kwargs['raw']:
             tags = self._get_instance_tag_cache(kwargs['instance'])
             Tag.objects.update_tags(kwargs['instance'], tags)
 
