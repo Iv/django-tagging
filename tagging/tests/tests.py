@@ -369,7 +369,6 @@ class TestModelTagField(TestCase):
         f1.save()
         tags = Tag.objects.get_for_object(f1)
         self.assertEquals(len(tags), 0)
-<<<<<<< HEAD
 
     def test_update_via_tags(self):
         f1 = FormTest.objects.create(tags=u'one two three')
@@ -389,8 +388,6 @@ class TestModelTagField(TestCase):
     def test_creation_with_nullable_tags_field(self):
         f1 = FormTestNull()
         self.assertEquals(f1.tags, '')
-=======
->>>>>>> origin/0.3.X
         
 class TestSettings(TestCase):
     def setUp(self):
